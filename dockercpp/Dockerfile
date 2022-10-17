@@ -4,6 +4,8 @@ COPY . /usr/src/cpp_test
 
 WORKDIR /usr/src/cpp_test
 
-RUN g++ main.cpp Perso.cpp -o xpApp
+RUN g++ -o ynov-docker main.cpp Perso.cpp
 
-CMD ["./xpApp"]
+CMD ["./ynov-docker"]
+
+LABEL Name=ynovdocker Version=0.0.1
