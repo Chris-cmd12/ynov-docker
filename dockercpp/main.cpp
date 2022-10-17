@@ -11,14 +11,27 @@ int main(int argc, char const *arg[]){
     perso.displayInformation();
 
     int addXp;
-
+    char exit = 'n';
     while(true){
+    
+        if (exit == 'y'){
+            return 0;
+            
+        }else{
+            perso.displayInformation();
+            cout << "Entrer le nombre d'expereince : "<< endl;
+            cin >> addXp;
+            perso.addXp(addXp);
+            perso.displayInformation();
+            cout << "avez vous terminer (y/n): " << endl;
+            cin >> exit;
+        }
 
-        cout << "Entrer le nombre d'expereince : "<< endl;
-        cin >> addXp;
-        perso.addXp(addXp);
-        perso.displayInformation();
+
+        
 
     }
+
+    return 0;
 
 }
