@@ -33,7 +33,7 @@ jobs:
           echo "DOCKER_IMAGE=${{ secrets.DOCKER_USER }}/cppxpapp:$IMAGE_TAG" >> $GITHUB_ENV
       - name: Build docker image
         run: >-
-          docker build .
+          docker build ./dockercpp
           --label "org.label-schema.vcs-ref=$GITHUB_SHA"
           --tag $DOCKER_IMAGE
       - run: docker push $DOCKER_IMAGE
