@@ -6,4 +6,4 @@ WORKDIR /usr/src/cpp_test
 
 RUN g++ main.cpp Perso.cpp -o xpApp
 
-CMD ["./Test"]
+CMD ["./xpApp"]
